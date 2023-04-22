@@ -1,7 +1,10 @@
 package br.com.academy.controllers;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
@@ -26,17 +29,28 @@ public class AlunoController {
 
     }
 
-    @PostMapping("/InsertAlunos")
-    public ModelAndView inserirAluno(Aluno aluno) {
+    @PostMapping("InsertAlunos")
+    public ModelAndView inserirAluno(@Valid Aluno aluno, BindingResult br) {
 
         ModelAndView mv = new ModelAndView();
-        mv.setViewName("redirect:/alunosAdicionados");
-        alunoRepositorio.save(aluno);
+
+        if(br.hasErrors()) {
+
+            mv.setViewName("aluno/formAluno");
+            mv.addObject("aluno");
+
+        } else {
+
+            mv.setViewName("redirect:/alunosAdicionados");
+            alunoRepositorio.save(aluno);
+
+        }
+
         return mv;
 
     }
 
-    @GetMapping("/alunosAdicionados")
+    @GetMapping("alunosAdicionados")
     public ModelAndView listagemAlunos() {
 
         ModelAndView mv = new ModelAndView();
