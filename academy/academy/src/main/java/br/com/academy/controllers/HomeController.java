@@ -1,0 +1,18 @@
+package br.com.academy.controllers;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.servlet.ModelAndView;
+
+@Controller
+public class HomeController {
+
+    @GetMapping("/")
+    public ModelAndView index() {
+        ModelAndView mv = new ModelAndView(); // inicializando e instânciando o objeto ModelAndView
+        mv.setViewName("home/index");
+        mv.addObject("msg", "Mensagem do controller");
+        return mv;
+    }
+
+}

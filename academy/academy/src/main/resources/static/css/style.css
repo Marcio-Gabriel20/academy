@@ -1,0 +1,125 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+}
+
+nav {
+    background-color: #4528A0;
+    text-transform: uppercase;
+}
+
+a {
+    cursor: pointer;
+}
+
+a img {
+    user-select: none;
+}
+
+.neo-section {
+    min-height: 85.6%;
+    width: 100%;
+    padding: 1.8rem;
+    position: relative;
+    background-size: cover !important;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+.wm {
+    width: 50%;
+    float: left;
+}
+
+.center {
+    text-align: center;
+}
+
+.neo-container {
+    max-width: 80rem;
+    padding: 2% 2%;
+    margin: 0 auto;
+    margin-top: 12.5rem;
+}
+
+.neo-container h1 {
+    color: #fff;
+    font-size: 3em;
+    font-weight: bold;
+}
+
+.btn-center {
+    background-color: rgba(0, 0, 0, .5);
+    width: 17.5rem;
+    color: #fff;
+    border-radius: 10px;
+    border: 3px solid #4528A0;
+    padding: 1.25rem;
+    font-weight: bold;
+    transition: all .5s;
+}
+
+.btn-center:hover {
+    background-color: rgba(0, 0, 0, .5);
+    color: #CE93D8;
+    border: 3px solid #4528A0;
+    transition: all .5s;
+}
+
+.navbar-nav {
+    display: flex;
+    justify-content: end;
+}
+
+.nav-item {
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+.nav-item:hover {
+    background-color: #1b0072;
+    border-radius: 10px;
+    transition: all .5s;
+}
+
+#sair:hover {
+    background-color: #B02A37;
+    transition: 0s;
+}
+
+.btns {
+    padding: 2% 15%;
+}
+
+.rodape {
+    color: #fff;
+    background-color: #4528A0;
+    text-align: center;
+    font-size: 1.25em;
+    padding: 15px;
+}
+
+/* Responsividade */
+
+@media screen and (max-width: 667px) {
+    
+    .wm {
+        width: 100%;
+    }
+
+    .nav {
+        height: 100%;
+    }
+
+    .neo-container {
+        margin-top: 7.5rem;
+    }
+
+}
