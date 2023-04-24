@@ -35,7 +35,7 @@ public class AlunoController {
         ModelAndView mv = new ModelAndView();
 
         if(br.hasErrors()) {
-
+            
             mv.setViewName("aluno/formAluno");
             mv.addObject("aluno");
 
@@ -86,6 +86,55 @@ public class AlunoController {
 
         alunoRepositorio.deleteById(id);
         return "redirect:/alunosAdicionados";
+
+    }
+
+    @GetMapping("/filtroAlunos")
+    public ModelAndView filtroAlunos() {
+
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("aluno/filtroAlunos");
+        return mv;
+
+    }
+
+    @GetMapping("alunosAtivos")
+    public ModelAndView listaAlunosAtivos() {
+
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("aluno/alunosAtivos");
+        mv.addObject("alunosAtivos", alunoRepositorio.findByStatusAtivos());
+        return mv;
+
+    }
+
+    @GetMapping("alunosInativos")
+    public ModelAndView listaAlunosInativos() {
+
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("aluno/alunosInativos");
+        mv.addObject("alunosInativos", alunoRepositorio.findByStatusInativos());
+        return mv;
+
+    }
+
+    @GetMapping("alunosCancelados")
+    public ModelAndView listaAlunosCancelados() {
+
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("aluno/alunosCancelados");
+        mv.addObject("alunosCancelados", alunoRepositorio.findByStatusCancelados());
+        return mv;
+
+    }
+
+    @GetMapping("alunosTrancados")
+    public ModelAndView listaAlunosTrancados() {
+
+        ModelAndView mv = new ModelAndView();
+        mv.setViewName("aluno/alunosTrancados");
+        mv.addObject("alunosTrancados", alunoRepositorio.findByStatusTrancados());
+        return mv;
 
     }
 

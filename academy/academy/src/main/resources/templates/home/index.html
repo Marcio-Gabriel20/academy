@@ -16,7 +16,7 @@
 </head>
 <body>
 
-    <div th:replace="fragmentos/fragmentos :: cabecalho"></div>
+    <div th:replace="~{fragmentos/fragmentos :: cabecalho}"></div>
 
     <section class="neo-section" style="background-image: url('img/bg-index.jpg');">
 
@@ -37,7 +37,46 @@
 
     </section>
 
-    <div th:replace="fragmentos/fragmentos :: rodape"></div>
+    <!-- Início do Modal -->
+
+    <div class="modal fade" id="modalPesquisa">
+
+        <div class="modal-dialog modal-lg">
+
+            <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <h5 class="modal-title">Encontre um aluno</h5>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span>&times;</span>
+                    </button>
+
+                </div>
+
+                <form action="pesquisarAluno" method="post" th:object="${aluno}">
+
+                    <div class="modal-body">
+
+                        <input type="text" placeholder="Digite o nome do aluno" th:field="*{nome}" class="form-control">
+
+                    </div>
+                    <div class="modal-footer">
+
+                        <button class="btn btn-danger" data-dismiss="modal">Fechar</button>
+                        <button type="submit" class="btn btn-success">Pesquisar</button>
+
+                    </div>
+
+                </form>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div th:replace="~{fragmentos/fragmentos :: rodape}"></div>
 
     <!-- <h1 th:text="${msg}"></h1> th:text="${msg}" serve para pegar a mensagem que foi passada por mv.addObject("msg", "Mensagem do controller"); no controller -->
 </body>
