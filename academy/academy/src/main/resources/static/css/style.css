@@ -75,11 +75,15 @@ a img {
 .navbar-nav {
     display: flex;
     justify-content: end;
+    align-items: center;
+    width: 100%;
 }
 
 .nav-item {
     font-weight: bold;
     border-radius: 10px;
+    padding-left: 1%;
+    padding-right: 1%;
     transition: all .5s;
 }
 
@@ -97,6 +101,56 @@ a img {
 .btns {
     padding: 2% 15%;
 }
+
+/*.search-box {
+    background: #c3b1e1;
+    border-radius: 40px;
+    padding: 5px;
+    margin-right: .5%;
+}
+
+.search-box:hover > .search-text{
+    width: 240px;
+    padding: 0 9px;
+}
+
+.search-box:hover > .search-btn{
+    background: white;
+    color: #982aff;
+    border-radius: 40px;
+}
+
+.search-btn {
+    color: black;
+    float: right;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+    cursor: pointer;
+    text-decoration: none;
+}
+.search-btn > i {
+    fontsize: 30px;
+}
+
+.search-text {
+    border: none;
+    background: none;
+    outline: none;
+    float: left;
+    padding: 0;
+    color: black;
+    font-size: 16px;
+    font-weight: normal;
+    transition: 0.4s;
+    line-height: 40px;
+    width: 0px; 
+}*/
 
 .rodape {
     color: #fff;
@@ -118,8 +172,16 @@ a img {
         height: 100%;
     }
 
+    #sair {
+        width: 100%;
+    }
+
     .neo-container {
         margin-top: 7.5rem;
     }
+
+    /*.search-box {
+        margin-bottom: 2%;
+    }*/
 
 }

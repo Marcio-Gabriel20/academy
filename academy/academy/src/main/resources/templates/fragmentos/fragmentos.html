@@ -31,7 +31,13 @@
                     <div class="navbar-nav">
                         <a class="nav-item nav-link active text-white" aria-current="page" th:href="@{/}">Home</a>
                         <a class="nav-item nav-link active text-white" th:href="@{/inserirAlunos}">Cadastrar Aluno</a>
-                        <a data-bs-toggle="modal" data-bs-target="#modalPesquisa" class="nav-item nav-link active text-white">Pesquisar Aluno</a>
+                        <a class="nav-item nav-link active text-white" data-bs-toggle="modal" data-bs-target="#modalPesquisa">Pesquisar Aluno</a>
+                        <!-- <div class="search-box">
+                            <form action="pesquisarAluno" method="post" th:object="${aluno}"></form>
+                                <input type="text" class="search-text" placeholder="Pesquisar Aluno" th:field="*{nome}">
+                                <button type="submit" class="nav-item nav-link active text-black search-btn"><i class="fas fa-search"></i></button>
+                            </form>
+                        </div> -->
                         <a class="nav-item nav-link active text-white btn btn-danger" id="sair" href="#">Sair</a>
                     </div>
                 </div>
