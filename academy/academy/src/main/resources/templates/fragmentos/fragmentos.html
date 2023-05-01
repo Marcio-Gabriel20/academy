@@ -38,7 +38,10 @@
                                 <button type="submit" class="nav-item nav-link active text-black search-btn"><i class="fas fa-search"></i></button>
                             </form>
                         </div> -->
-                        <a class="nav-item nav-link active text-white btn btn-danger" id="sair" href="#">Sair</a>
+                        <form action="/logout" method="post" class="formPrincipal">
+                            <span th:text="${session.usuarioLogado.user}"></span>
+                            <button type="submit" class="nav-item nav-link active text-white btn btn-danger" id="sair" href="#">Sair</button>
+                        </form>
                     </div>
                 </div>
             </div>

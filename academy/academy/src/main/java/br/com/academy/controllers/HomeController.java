@@ -9,12 +9,4 @@ import br.com.academy.model.Aluno;
 @Controller
 public class HomeController {
 
-    @GetMapping("/index")
-    public ModelAndView index() {
-        ModelAndView mv = new ModelAndView(); // inicializando e instânciando o objeto ModelAndView
-        mv.setViewName("home/index");
-        mv.addObject("aluno", new Aluno());
-        return mv;
-    }
-
 }

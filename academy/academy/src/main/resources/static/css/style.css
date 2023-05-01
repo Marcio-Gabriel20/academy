@@ -37,6 +37,10 @@ a img {
     float: left;
 }
 
+.wm a {
+    text-decoration: none;
+}
+
 .center {
     text-align: center;
 }
@@ -91,6 +95,23 @@ a img {
     background-color: #1b0072;
     border-radius: 10px;
     transition: all .5s;
+}
+
+.formPrincipal {
+    width: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    border: 1px solid white;
+    padding: .5%;
+    margin-left: 1%;
+    border-radius: 10px;
+}
+
+#sair {
+    margin-left: 5%;
+
 }
 
 #sair:hover {
@@ -173,7 +194,7 @@ a img {
     }
 
     #sair {
-        width: 100%;
+        width: 20%;
     }
 
     .neo-container {
@@ -183,5 +204,11 @@ a img {
     /*.search-box {
         margin-bottom: 2%;
     }*/
+
+    .formPrincipal {
+        width: 60%;
+        padding-top: 2%;
+        padding-bottom: 2%;
+    }
 
 }

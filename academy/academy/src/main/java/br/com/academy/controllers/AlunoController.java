@@ -53,7 +53,7 @@ public class AlunoController {
 
     }
 
-    @GetMapping("alunosCadastrados")
+    @GetMapping("alunosAdicionados")
     public ModelAndView listagemAlunos() {
 
         ModelAndView mv = new ModelAndView();
