@@ -98,13 +98,16 @@ a img {
 }
 
 .formPrincipal {
-    width: 12%;
+    width: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     color: white;
     border: 1px solid white;
-    padding: .5%;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    padding-left: 1%;
+    padding-right: 1%;
     margin-left: 1%;
     border-radius: 10px;
 }
